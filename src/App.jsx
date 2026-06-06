@@ -568,7 +568,7 @@ function ContactBanner({ navigate }) {
         <div className="relative grid gap-10 lg:grid-cols-[1fr_.9fr] lg:items-center">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }}>
             <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.3em] text-sageSoft"><MapPin size={15} /> Visit Anna Cafe</p>
-            <h2 className="font-display text-5xl font-bold sm:text-7xl text-balance">A polished website that turns views into visits and orders.</h2>
+            <h2 className="font-display text-5xl font-bold sm:text-7xl text-balance">A polished cafe that turns views into visits and orders.</h2>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-cream/72">Location, socials, gallery, full menu products, and a WhatsApp tray now live in one elegant multi-page build.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={socialLinks.maps} target="_blank" rel="noreferrer" className="rounded-full bg-cream px-6 py-3 text-sm font-extrabold uppercase tracking-[0.2em] text-forest transition hover:-translate-y-1">Open maps</a>
@@ -1030,7 +1030,7 @@ function GalleryPage() {
             <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
               <div>
                 <p className="mb-3 inline-flex items-center gap-2 rounded-full border border-forest/10 bg-white/55 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.3em] text-moss shadow-porcelain">Original menu</p>
-                <h2 className="font-display text-5xl font-bold text-forest sm:text-6xl">Menu PDF pages</h2>
+                <h2 className="font-display text-5xl font-bold text-forest sm:text-6xl">Cafe Menu</h2>
               </div>
               <a href="/assets/anna-cafe-menu.pdf" className="inline-flex items-center gap-2 rounded-full bg-forest px-6 py-3 text-sm font-extrabold uppercase tracking-[0.2em] text-cream shadow-leaf transition hover:-translate-y-1">Download PDF <ArrowUpRight size={17} /></a>
             </div>
