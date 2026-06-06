@@ -1348,7 +1348,7 @@ function Footer({ navigate }) {
       <div className="container-wide flex flex-col gap-6 border-t border-white/10 pt-8 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="font-display text-2xl font-bold tracking-[0.22em]">ANNA CAFE</p>
-          <p className="mt-2 text-sm text-cream/55">React + Tailwind multi-page animated concept with drag-to-tray ordering.</p>
+          {/* <p className="mt-2 text-sm text-cream/55">React + Tailwind multi-page animated concept with drag-to-tray ordering.</p> */}
         </div>
         <div className="flex flex-wrap gap-3">
           {Object.entries(routeTitles).map(([href, label]) => (
