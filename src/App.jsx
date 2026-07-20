@@ -50,6 +50,7 @@ const stagger = {
 const routeTitles = {
   '/': 'Home',
   '/products': 'Products',
+  '/menu': 'Menu',
   '/gallery': 'Gallery',
   '/order': 'Order Tray',
   '/contact': 'Contact'
@@ -349,11 +350,6 @@ function Hero({ navigate }) {
               </div>
             </div>
           </motion.div>
-
-          {/* <div className="absolute -right-3 top-1/2 z-20 flex -translate-y-1/2 flex-col gap-2">
-            <button onClick={() => move(-1)} className="grid h-11 w-11 place-items-center rounded-full bg-cream/85 text-forest shadow-porcelain backdrop-blur-xl transition hover:-translate-y-0.5"><ArrowLeft size={18} /></button>
-            <button onClick={() => move(1)} className="grid h-11 w-11 place-items-center rounded-full bg-cream/85 text-forest shadow-porcelain backdrop-blur-xl transition hover:-translate-y-0.5"><ArrowRight size={18} /></button>
-          </div> */}
 
           <motion.div animate={{ y: [0, -16, 0], rotate: [0, 3, 0] }} transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }} className="absolute -left-4 top-8 z-20 hidden rounded-[2rem] border border-white/40 bg-white/70 p-4 shadow-porcelain backdrop-blur-xl sm:block">
             <img src={logo} alt="Anna Cafe emblem" className="h-24 w-24 rounded-full object-cover" />
@@ -746,6 +742,10 @@ function ProductsPage({ onAdd, navigate, onDragStartItem, onDragEndItem }) {
       </section>
     </>
   );
+}
+
+function TestMenuPage() {
+  return <div style={{ minHeight: '60vh' }} />;
 }
 
 function TrayShelfCard({ item, onDropItem, onDragStartItem, onDragEndItem }) {
@@ -1269,12 +1269,10 @@ function CartTray({ cart, onDropItem, updateQty, removeItem, clearCart, navigate
               <span>
                 <span className={`block text-xs font-extrabold uppercase tracking-[0.28em] ${trayActive ? 'text-gold' : 'text-gold'}`}>{showHint ? 'Visible serving tray · drag & drop here' : 'Anna Cafe serving tray'}</span>
                 <span className={`block font-display text-2xl font-bold ${trayActive ? 'text-cream' : 'text-cream'}`}>{count ? `${count} item${count > 1 ? 's' : ''} · QAR ${total}` : 'Drop products into the tray'}</span>
-                {/* <span className={`mt-1 block text-xs font-semibold uppercase tracking-[0.18em] ${trayActive ? 'text-cream/70' : 'text-cream/60'}`}>Desktop: drag cards down. Mobile: tap Add to tray.</span> */}
               </span>
             </button>
             <div className="flex flex-wrap items-center gap-2">
               <button onClick={() => setExpanded(true)} className={`rounded-full border px-4 py-2 text-xs font-extrabold uppercase tracking-[0.18em] transition ${trayActive ? 'border-white/15 bg-white/10 text-cream hover:bg-white/15' : 'border-white/15 bg-white/10 text-cream hover:bg-white/15'}`}>{expanded ? 'Tray Opened' : 'Open tray'}</button>
-              {/* <a href={cart.length ? buildWhatsAppUrl(cart, orderDetails) : '#'} target={cart.length ? '_blank' : undefined} rel="noreferrer" onClick={(event) => { if (!cart.length) event.preventDefault(); }} className={`rounded-full px-5 py-3 text-xs font-extrabold uppercase tracking-[0.18em] transition ${cart.length ? 'bg-gold text-deep hover:-translate-y-0.5' : 'bg-white/10 text-cream/40 cursor-not-allowed'}`}>Place on WhatsApp</a> */}
               <button onClick={() => setExpanded((value) => !value)} className={`grid h-10 w-10 place-items-center rounded-full transition ${trayActive ? 'bg-white/12 text-cream' : 'bg-white/10 text-cream'}`} aria-label={expanded ? "Close tray" : "Open tray"}><ChevronDown className={`transition ${expanded ? '' : 'rotate-180'}`} size={18} /></button>
             </div>
           </div>
@@ -1282,16 +1280,6 @@ function CartTray({ cart, onDropItem, updateQty, removeItem, clearCart, navigate
           <AnimatePresence initial={false}>
             {expanded && (
               <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
-                {/* <div className={`mt-4 rounded-[1.4rem] border border-dashed p-4 text-center transition ${trayActive ? 'border-gold bg-gold/15 text-cream' : 'border-gold/30 bg-white/8 text-cream'}`}>
-                  <div className="mx-auto flex max-w-2xl items-center justify-center gap-3">
-                    <MousePointer2 className={trayActive ? 'text-gold' : 'text-moss'} />
-                    <div>
-                      <p className="font-display text-2xl font-bold">{trayActive ? 'Release the item to add it' : 'Drop zone is ready'}</p>
-                      <p className={`text-sm ${trayActive ? 'text-cream/70' : 'text-cream/60'}`}>Drag any product card onto this tray area, or use the Add to tray button.</p>
-                    </div>
-                  </div>
-                </div> */}
-
                 <div className={`mt-3 max-h-[46vh] overflow-y-auto rounded-[1.4rem] border border-dashed border-gold text-center transition  p-3  ${trayActive ? 'bg-white/10' : 'bg-white/8'}`}>
                   {cart.length === 0 ? (
                     <div className={`grid place-items-center rounded-[1.2rem] p-7 text-center ${trayActive ? 'bg-white/10 text-cream' : 'bg-white/8 text-cream'}`}>
@@ -1348,7 +1336,6 @@ function Footer({ navigate }) {
       <div className="container-wide flex flex-col gap-6 border-t border-white/10 pt-8 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="font-display text-2xl font-bold tracking-[0.22em]">ANNA CAFE</p>
-          {/* <p className="mt-2 text-sm text-cream/55">React + Tailwind multi-page animated concept with drag-to-tray ordering.</p> */}
         </div>
         <div className="flex flex-wrap gap-3">
           {Object.entries(routeTitles).map(([href, label]) => (
@@ -1396,20 +1383,21 @@ export default function App() {
   const cartCount = cart.reduce((sum, entry) => sum + entry.qty, 0);
 
   return (
-    <main className="relative overflow-hidden">
+    <main className="relative flex min-h-screen flex-col overflow-hidden">
       <CursorGlow />
       <Navbar path={path} navigate={navigate} cartCount={cartCount} />
       <AnimatePresence mode="wait">
-        <motion.div key={path} initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -18 }} transition={{ duration: 0.35 }}>
+        <motion.div key={path} initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -18 }} transition={{ duration: 0.35 }} className="flex-1">
           {path === '/' && <HomePage navigate={navigate} onAdd={addItem} />}
           {path === '/products' && <ProductsPage navigate={navigate} onAdd={addItem} onDragStartItem={() => setDragActive(true)} onDragEndItem={() => setDragActive(false)} />}
+          {path === '/menu' && <TestMenuPage />}
           {path === '/gallery' && <GalleryPage />}
           {path === '/order' && <OrderPage cart={cart} onAdd={addItem} updateQty={updateQty} removeItem={removeItem} clearCart={clearCart} orderDetails={orderDetails} onOrderDetailsChange={setOrderDetails} onDragStartItem={() => setDragActive(true)} onDragEndItem={() => setDragActive(false)} />}
           {path === '/contact' && <ContactPage navigate={navigate} />}
         </motion.div>
       </AnimatePresence>
       <Footer navigate={navigate} />
-      {path !== '/order' && <CartTray cart={cart} onDropItem={addItem} updateQty={updateQty} removeItem={removeItem} clearCart={clearCart} navigate={navigate} path={path} dragActive={dragActive} />}
+      {path !== '/order' && path !== '/menu' && <CartTray cart={cart} onDropItem={addItem} updateQty={updateQty} removeItem={removeItem} clearCart={clearCart} navigate={navigate} path={path} dragActive={dragActive} />}
     </main>
   );
 }
