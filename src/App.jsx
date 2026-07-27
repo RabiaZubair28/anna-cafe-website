@@ -744,8 +744,214 @@ function ProductsPage({ onAdd, navigate, onDragStartItem, onDragEndItem }) {
   );
 }
 
+const MENU_DATA = [
+  {
+    title: 'Hot Coffee',
+    arabic: 'قهوة ساخنة',
+    items: [
+      ['Espresso', 'إسبريسو', 10, 'espresso.webp'],
+      ['Double Espresso', 'قهوة إسبريسو مزدوجة', 15, 'double-espresso.webp'],
+      ['Americano', 'أمريكانو', 12, 'americano.webp'],
+      ['Cortado', 'كورتادو', 15, 'cortado.webp'],
+      ['Flat White', 'فلات وايت', 19, 'flat-white.webp'],
+      ['Cafe Latte', 'كافيه لاتيه', 19, 'cafe-latte.webp'],
+      ['Cappuccino', 'كابتشينو', 19, 'cappuccino.webp'],
+      ['Spanish Latte', 'سبانيش لاتيه', 19, 'spanish-latte.webp'],
+      ['Vanilla Latte', 'فانيلا لاتيه', 20, 'vanilla-latte.webp'],
+      ['Mocha', 'موكا', 20, 'mocha.webp'],
+      ['Caramel Latte', 'كراميل لاتيه', 20, 'caramel-latte.webp'],
+      ['Salted Caramel Latte', 'لاتيه كراميل مملح', 20, 'salted-caramel-latte.webp'],
+      ['Arabic Coffee', 'قهوة عربية', 30, 'arabic-coffee.webp'],
+      ['Turkish Coffee', 'القهوة التركية', 15, 'turkish-coffee.webp']
+    ]
+  },
+  {
+    title: 'Special Yemeni Coffee',
+    arabic: 'قهوة يمنية مميزة',
+    items: [
+      ['Espresso', 'إسبريسو', 20, 'yemeni-espresso.webp'],
+      ['Double Espresso', 'قهوة إسبريسو مزدوجة', 25, 'yemeni-double-espresso.webp'],
+      ['Americano', 'أمريكانو', 25, 'yemeni-americano.webp'],
+      ['Cortado', 'كورتادو', 27, 'yemeni-cortado.webp'],
+      ['Flat White', 'فلات وايت', 26, 'yemeni-flat-white.webp'],
+      ['Cafe Latte', 'كافيه لاتيه', 26, 'yemeni-cafe-latte.webp'],
+      ['Cappuccino', 'كابتشينو', 25, 'yemeni-cappuccino.webp'],
+      ['Spanish Latte', 'سبانيش لاتيه', 27, 'yemeni-spanish-latte.webp'],
+      ['Vanilla Latte', 'فانيلا لاتيه', 27, 'yemeni-vanilla-latte.webp'],
+      ['Mocha', 'موكا', 24, 'yemeni-mocha.webp']
+    ]
+  },
+  {
+    title: 'Filter Brews',
+    arabic: 'قهوة مفلترة',
+    items: [
+      ['V60', 'في 60', 20, 'v60.webp'],
+      ['V60 Yemen Coffee', 'في 60 قهوة يمني', 30, 'v60-yemen-coffee.webp'],
+      ['Chemex', 'كيميكس', 20, 'chemex.webp'],
+      ['Afropress', 'أفروبريس', 20, 'afropress.webp'],
+      ['Cold Brew', 'كولد برو', 19, 'cold-brew.webp']
+    ]
+  },
+  {
+    title: 'Cold Drinks',
+    arabic: 'مشروبات باردة',
+    items: [
+      ['Iced Americano', 'أمريكانو مثلج', 12, 'iced-americano.webp'],
+      ['Iced Salted Caramel', 'كراميل مملح مثلج', 20, 'iced-salted-caramel.webp'],
+      ['Iced Caramel', 'كراميل مثلج', 20, 'iced-caramel.webp'],
+      ['Iced Spanish', 'سبانيش مثلج', 19, 'iced-spanish.webp'],
+      ['Iced Latte', 'لاتيه مثلج', 19, 'iced-latte.webp'],
+      ['Iced Vanilla', 'فانيلا مثلج', 20, 'iced-vanilla.webp']
+    ]
+  },
+  {
+    title: 'Non Coffee',
+    arabic: 'مشروبات بدون قهوة',
+    items: [
+      ['Green Tea', 'شاي أخضر', 14, 'green-tea.webp'],
+      ['English Tea', 'شاي إنجليزي', 14, 'english-tea.webp'],
+      ['Matcha Latte', 'ماتشا لاتيه', 20, 'matcha-latte.webp'],
+      ['Hot Chocolate', 'شوكولاتة ساخنة', 20, 'hot-chocolate.webp'],
+      ['Iced Chocolate', 'شوكولاتة مثلجة', 20, 'iced-chocolate.webp']
+    ]
+  },
+  {
+    title: 'Water',
+    arabic: 'مياه',
+    items: [
+      ['Still', 'مياه عادية', 8, 'still-water.webp'],
+      ['Sparkling', 'مياه غازية', 10, 'sparkling-water.webp']
+    ]
+  },
+  {
+    title: 'Mojito',
+    arabic: 'موهيتو',
+    items: [
+      ['Strawberry Mojito', 'موهيتو الفراولة', 17, 'strawberry-mojito.webp'],
+      ['Raspberry Mojito', 'موهيتو التوت', 17, 'raspberry-mojito.webp'],
+      ['Blackberry Mojito', 'موهيتو التوت الأسود', 17, 'blackberry-mojito.webp'],
+      ['Blueberry Mojito', 'موهيتو التوت الأزرق', 17, 'blueberry-mojito.webp'],
+      ['Watermelon Mojito', 'موهيتو البطيخ', 17, 'watermelon-mojito.webp'],
+      ['Passion Fruit Mojito', 'موهيتو الباشن فروت', 17, 'passion-fruit-mojito.webp'],
+      ['Orange Juice', 'عصير برتقال', 13, 'orange-juice.webp'],
+      ['Limon Mint Curcado Vemto', 'ليمون بالنعناع كركديه فيمتو', 17, 'limon-mint-curcado-vemto.webp']
+    ]
+  },
+  {
+    title: 'Cookies',
+    arabic: 'كوكيز',
+    items: [
+      ['Classic Cookies', 'كوكيز كلاسيك', 18, 'classic-cookies.webp'],
+      ['Double Chocolate', 'كوكيز دبل شوكولاتة', 20, 'double-chocolate.webp'],
+      ['Pistachio Cookies', 'كوكيز بيستاشيو', 22, 'pistachio-cookies.webp'],
+      ['Classic Brownies', 'كلاسيك براوني', 18, 'classic-brownies.webp']
+    ]
+  },
+  {
+    title: 'Cake & Sweets',
+    arabic: 'كيك وحلويات',
+    items: [
+      ['Honey Cake', 'كيك العسل', 30, 'honey-cake.webp'],
+      ['San Sebastian Cake', 'كيك سان سيباستيان', 30, 'san-sebastian-cake.webp']
+    ]
+  },
+  {
+    title: 'Cheese Cake',
+    arabic: 'تشيز كيك',
+    items: [
+      ['Raspberry Cheese Cake', 'تشيز كيك توت', 30, 'raspberry-cheese-cake.webp'],
+      ['Mango Cheese Cake', 'تشيز كيك مانجو', 30, 'mango-cheese-cake.webp'],
+      ['Blueberry Cheese Cake', 'تشيز كيك توت أزرق', 30, 'blueberry-cheese-cake.webp'],
+      ['Classic Tiramisu', 'تيراميسو كلاسيكي', 30, 'classic-tiramisu.webp']
+    ]
+  },
+  {
+    title: 'Croissant',
+    arabic: 'كرواسون',
+    items: [
+      ['Croissant Plain', 'كرواسون سادة', 12, 'croissant-plain.webp'],
+      ['Croissant Cheese', 'كرواسون جبن', 14, 'croissant-cheese.webp'],
+      ['Croissant Zaatar', 'كرواسون زعتر', 14, 'croissant-zaatar.webp'],
+      ['Croissant Plain Au Chocolate', 'كرواسون شوكولاتة', 14, 'croissant-plain-au-chocolate.webp'],
+      ['Croissant Cheese Danish', 'كرواسون دنش جبن', 18, 'croissant-cheese-danish.webp']
+    ]
+  },
+  {
+    title: 'Special Sweets',
+    arabic: 'حلويات خاصة',
+    items: [
+      ['Sweet Cake', 'كيك حلو', 25, 'sweet-cake.webp'],
+      ['Cup Cake', 'كب كيك', 10, 'cup-cake.webp'],
+      ['Tiramisu', 'تيراميسو', 25, 'tiramisu.webp'],
+      ['Signature Basbousa', 'بسبوسة', 8, 'signature-basbousa.webp'],
+      ['Umm Ali', 'أم علي', 30, 'umm-ali.webp']
+    ]
+  },
+  {
+    title: 'Sandwich',
+    arabic: 'ساندويتش',
+    items: [
+      ['Chicken', 'دجاج', 12, 'chicken.webp']
+    ]
+  }
+];
+
+function MenuItemCard({ nameEn, nameAr, price, image }) {
+  return (
+    <motion.article variants={fadeUp} className="flex flex-col">
+      <div className="overflow-hidden rounded-[1.75rem] shadow-porcelain">
+        <img
+          src={`/assets/menu/${image}`}
+          alt={nameEn}
+          className="h-64 w-full object-cover sm:h-72"
+        />
+      </div>
+      <div className="mt-4 flex flex-col items-start text-left">
+        <h3 className="flex flex-wrap items-baseline gap-2 font-display text-xl font-bold leading-tight text-forest">
+          <span>{nameEn}</span>
+          <span className="text-base font-semibold text-moss" dir="rtl">{nameAr}</span>
+        </h3>
+        <span className="mt-2 rounded-full bg-forest px-4 py-1.5 text-xs font-extrabold text-cream">
+          QAR {price.toFixed(2)}
+        </span>
+      </div>
+    </motion.article>
+  );
+}
+
 function TestMenuPage() {
-  return <div style={{ minHeight: '60vh' }} />;
+  return (
+    <>
+      <PageHero
+        eyebrow="Full menu"
+        title="Menu"
+        copy="Every item on the Anna Cafe menu, organised by section — just the picture, the name, and the price."
+        image="/assets/menu/classic-tiramisu.webp"
+      />
+      <section className="relative bg-cream py-14 section-pad">
+        <div className="container-wide space-y-16">
+          {MENU_DATA.map((category) => (
+            <div key={category.title}>
+              <div className="mb-6 border-b border-forest/10 pb-4">
+                <h2 className="font-display text-3xl font-bold text-forest">{category.title}</h2>
+              </div>
+              <motion.div
+                variants={stagger}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: '-80px' }}
+                className="grid gap-10 sm:grid-cols-2"
+              >
+                {category.items.map(([nameEn, nameAr, price, image]) => (
+                  <MenuItemCard key={`${category.title}-${nameEn}`} nameEn={nameEn} nameAr={nameAr} price={price} image={image} />
+                ))}
+              </motion.div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
+  );
 }
 
 function TrayShelfCard({ item, onDropItem, onDragStartItem, onDragEndItem }) {
