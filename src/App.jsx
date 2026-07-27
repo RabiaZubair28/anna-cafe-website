@@ -214,6 +214,7 @@ function Navbar({ path, navigate, cartCount }) {
   const links = [
     ['Home', '/'],
     ['Products', '/products'],
+    ['Menu', '/menu'],
     ['Gallery', '/gallery'],
     ['Order Tray', '/order'],
     ['Contact', '/contact']
