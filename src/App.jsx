@@ -904,7 +904,7 @@ function MenuItemCard({ nameEn, nameAr, price, image }) {
         <img
           src={`/assets/menu/${image}`}
           alt={nameEn}
-          className="h-64 w-full object-cover sm:h-72"
+          className="h-80 w-full object-cover sm:h-96"
         />
       </div>
       <div className="mt-4 flex flex-col items-start text-left">
