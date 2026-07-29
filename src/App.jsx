@@ -752,18 +752,18 @@ const MENU_DATA = [
     items: [
       ['Espresso', 'إسبريسو', 10, 'espresso.webp'],
       ['Double Espresso', 'قهوة إسبريسو مزدوجة', 15, 'double-espresso.webp'],
-      ['Americano', 'أمريكانو', 12, 'americano.webp'],
-      ['Cortado', 'كورتادو', 15, 'cortado.webp'],
-      ['Flat White', 'فلات وايت', 19, 'flat-white.webp'],
-      ['Cafe Latte', 'كافيه لاتيه', 19, 'cafe-latte.webp'],
-      ['Cappuccino', 'كابتشينو', 19, 'cappuccino.webp'],
-      ['Spanish Latte', 'سبانيش لاتيه', 19, 'spanish-latte.webp'],
-      ['Vanilla Latte', 'فانيلا لاتيه', 20, 'vanilla-latte.webp'],
-      ['Mocha', 'موكا', 20, 'mocha.webp'],
-      ['Caramel Latte', 'كراميل لاتيه', 20, 'caramel-latte.webp'],
-      ['Salted Caramel Latte', 'لاتيه كراميل مملح', 20, 'salted-caramel-latte.webp'],
+      ['Americano', 'أمريكانو', 15, 'americano.webp'],
+      ['Cortado', 'كورتادو', 19, 'cortado.webp'],
+      ['Flat White', 'فلات وايت', 22, 'flat-white.webp'],
+      ['Cafe Latte', 'كافيه لاتيه', 22, 'cafe-latte.webp'],
+      ['Cappuccino', 'كابتشينو', 22, 'cappuccino.webp'],
+      ['Spanish Latte', 'سبانيش لاتيه', 24, 'spanish-latte.webp'],
+      ['Vanilla Latte', 'فانيلا لاتيه', 24, 'vanilla-latte.webp'],
+      ['Mocha', 'موكا', 24, 'mocha.webp'],
+      ['Caramel Latte', 'كراميل لاتيه', 24, 'caramel-latte.webp'],
+      ['Salted Caramel Latte', 'لاتيه كراميل مملح', 24, 'salted-caramel-latte.webp'],
       ['Arabic Coffee', 'قهوة عربية', 30, 'arabic-coffee.webp'],
-      ['Turkish Coffee', 'القهوة التركية', 15, 'turkish-coffee.webp']
+      ['Turkish Coffee', 'القهوة التركية', 20, 'turkish-coffee.webp']
     ]
   },
   {
@@ -786,23 +786,23 @@ const MENU_DATA = [
     title: 'Filter Brews',
     arabic: 'قهوة مفلترة',
     items: [
-      ['V60', 'في 60', 20, 'v60.webp'],
+      ['V60', 'في 60', 24, 'v60.webp'],
       ['V60 Yemen Coffee', 'في 60 قهوة يمني', 30, 'v60-yemen-coffee.webp'],
       ['Chemex', 'كيميكس', 20, 'chemex.webp'],
       ['Afropress', 'أفروبريس', 20, 'afropress.webp'],
-      ['Cold Brew', 'كولد برو', 19, 'cold-brew.webp']
+      ['Cold Brew', 'كولد برو', 30, 'cold-brew.webp']
     ]
   },
   {
     title: 'Cold Drinks',
     arabic: 'مشروبات باردة',
     items: [
-      ['Iced Americano', 'أمريكانو مثلج', 12, 'iced-americano.webp'],
+      ['Iced Americano', 'أمريكانو مثلج', 15, 'iced-americano.webp'],
       ['Iced Salted Caramel', 'كراميل مملح مثلج', 20, 'iced-salted-caramel.webp'],
-      ['Iced Caramel', 'كراميل مثلج', 20, 'iced-caramel.webp'],
-      ['Iced Spanish', 'سبانيش مثلج', 19, 'iced-spanish.webp'],
-      ['Iced Latte', 'لاتيه مثلج', 19, 'iced-latte.webp'],
-      ['Iced Vanilla', 'فانيلا مثلج', 20, 'iced-vanilla.webp']
+      ['Iced Caramel', 'كراميل مثلج', 24, 'iced-caramel.webp'],
+      ['Iced Spanish', 'سبانيش مثلج', 24, 'iced-spanish.webp'],
+      ['Iced Latte', 'لاتيه مثلج', 24, 'iced-latte.webp'],
+      ['Iced Vanilla', 'فانيلا مثلج', 24, 'iced-vanilla.webp']
     ]
   },
   {
@@ -811,7 +811,7 @@ const MENU_DATA = [
     items: [
       ['Green Tea', 'شاي أخضر', 14, 'green-tea.webp'],
       ['English Tea', 'شاي إنجليزي', 14, 'english-tea.webp'],
-      ['Matcha Latte', 'ماتشا لاتيه', 20, 'matcha-latte.webp'],
+      ['Matcha Latte', 'ماتشا لاتيه', 24, 'matcha-latte.webp'],
       ['Hot Chocolate', 'شوكولاتة ساخنة', 20, 'hot-chocolate.webp'],
       ['Iced Chocolate', 'شوكولاتة مثلجة', 20, 'iced-chocolate.webp']
     ]
@@ -828,14 +828,14 @@ const MENU_DATA = [
     title: 'Mojito',
     arabic: 'موهيتو',
     items: [
-      ['Strawberry Mojito', 'موهيتو الفراولة', 17, 'strawberry-mojito.webp'],
-      ['Raspberry Mojito', 'موهيتو التوت', 17, 'raspberry-mojito.webp'],
-      ['Blackberry Mojito', 'موهيتو التوت الأسود', 17, 'blackberry-mojito.webp'],
-      ['Blueberry Mojito', 'موهيتو التوت الأزرق', 17, 'blueberry-mojito.webp'],
-      ['Watermelon Mojito', 'موهيتو البطيخ', 17, 'watermelon-mojito.webp'],
-      ['Passion Fruit Mojito', 'موهيتو الباشن فروت', 17, 'passion-fruit-mojito.webp'],
-      ['Orange Juice', 'عصير برتقال', 13, 'orange-juice.webp'],
-      ['Limon Mint Curcado Vemto', 'ليمون بالنعناع كركديه فيمتو', 17, 'limon-mint-curcado-vemto.webp']
+      ['Strawberry Mojito', 'موهيتو الفراولة', 20, 'strawberry-mojito.webp'],
+      ['Raspberry Mojito', 'موهيتو التوت', 20, 'raspberry-mojito.webp'],
+      ['Blackberry Mojito', 'موهيتو التوت الأسود', 20, 'blackberry-mojito.webp'],
+      ['Blueberry Mojito', 'موهيتو التوت الأزرق', 20, 'blueberry-mojito.webp'],
+      ['Watermelon Mojito', 'موهيتو البطيخ', 20, 'watermelon-mojito.webp'],
+      ['Passion Fruit Mojito', 'موهيتو الباشن فروت', 20, 'passion-fruit-mojito.webp'],
+      ['Orange Juice', 'عصير برتقال', 15, 'orange-juice.webp'],
+      ['Limon Mint Curcado Vemto', 'ليمون بالنعناع كركديه فيمتو', 20, 'limon-mint-curcado-vemto.webp']
     ]
   },
   {
