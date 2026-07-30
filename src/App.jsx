@@ -884,6 +884,7 @@ const MENU_DATA = [
     arabic: 'حلويات خاصة',
     items: [
       ['Sweet Cake', 'كيك حلو', 25, 'sweet-cake.webp'],
+      ['Classic Mango Sweet Cake', 'كلاسيك مانجو كيك حلو', 30, 'classic-mango-sweet-cake.webp'],
       ['Cup Cake', 'كب كيك', 10, 'cup-cake.webp'],
       ['Tiramisu', 'تيراميسو', 25, 'tiramisu.webp'],
       ['Signature Basbousa', 'بسبوسة', 8, 'signature-basbousa.webp'],
