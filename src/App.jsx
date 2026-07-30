@@ -802,7 +802,9 @@ const MENU_DATA = [
       ['Iced Caramel', 'كراميل مثلج', 24, 'iced-caramel.webp'],
       ['Iced Spanish', 'سبانيش مثلج', 24, 'iced-spanish.webp'],
       ['Iced Latte', 'لاتيه مثلج', 24, 'iced-latte.webp'],
-      ['Iced Vanilla', 'فانيلا مثلج', 24, 'iced-vanilla.webp']
+      ['Iced Vanilla', 'فانيلا مثلج', 24, 'iced-vanilla.webp'],
+      ['Frapechino', 'فربتشينو', 24, 'frapechino.webp'],
+      ['Karkade', 'كركديه', 20, 'karkade.webp']
     ]
   },
   {
