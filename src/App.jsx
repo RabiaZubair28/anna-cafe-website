@@ -855,7 +855,12 @@ const MENU_DATA = [
     arabic: 'كيك وحلويات',
     items: [
       ['Honey Cake', 'كيك العسل', 30, 'honey-cake.webp'],
-      ['San Sebastian Cake', 'كيك سان سيباستيان', 30, 'san-sebastian-cake.webp']
+      ['San Sebastian Cake', 'كيك سان سيباستيان', 30, 'san-sebastian-cake.webp'],
+      ['Red Velvet Cake', 'كيكة ريد فيلفيت', 26, 'red-velvet-cake.webp'],
+      ['Victoria Cake', 'كيكة فيكتوريا', 26, 'victoria-cake.webp'],
+      ['Dark Chocolate Donut', 'دونات شوكولاتة داكنة', 12, 'dark-chocolate-donut.webp'],
+      ['Chocolate Muffin', 'مافن شوكولاتة', 12, 'chocolate-muffin.webp'],
+      ['Blueberry Muffin', 'مافن توت أزرق', 12, 'blueberry-muffin.webp']
     ]
   },
   {
