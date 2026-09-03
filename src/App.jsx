@@ -798,7 +798,7 @@ const MENU_DATA = [
     arabic: 'مشروبات باردة',
     items: [
       ['Iced Americano', 'أمريكانو مثلج', 15, 'iced-americano.webp'],
-      ['Iced Salted Caramel', 'كراميل مملح مثلج', 20, 'iced-salted-caramel.webp'],
+      ['Iced Salted Caramel', 'كراميل مملح مثلج', 24, 'iced-salted-caramel.webp'],
       ['Iced Caramel', 'كراميل مثلج', 24, 'iced-caramel.webp'],
       ['Iced Spanish', 'سبانيش مثلج', 24, 'iced-spanish.webp'],
       ['Iced Latte', 'لاتيه مثلج', 24, 'iced-latte.webp'],
