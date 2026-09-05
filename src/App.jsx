@@ -803,6 +803,7 @@ const MENU_DATA = [
       ['Iced Spanish', 'سبانيش مثلج', 24, 'iced-spanish.webp'],
       ['Iced Latte', 'لاتيه مثلج', 24, 'iced-latte.webp'],
       ['Iced Vanilla', 'فانيلا مثلج', 24, 'iced-vanilla.webp'],
+      ['Ice Matcha', 'آيس ماتشا', 24, 'ice-matcha.webp'],
       ['Frapechino', 'فربتشينو', 24, 'frapechino.webp'],
       ['Karkade', 'كركديه', 20, 'karkade.webp']
     ]
